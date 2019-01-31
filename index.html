@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Motherfucking Website</title>
     <style>
+      * {
+        box-sizing: inherit;
+      }
+      html {
+        box-sizing: border-box;
+      }
       ::selection {
         background: #fee555;
       }
@@ -35,10 +41,8 @@
         text-align: justify;
       }
       h1, h2, h3, h4, h5, h6 {
-        line-height: 1;
-        text-align: left;
         font-family: "Avenir Next W01", "Avenir Next", Avenir, "Helvetica Neue", helvetica, arial, sans-serif;
-        letter-spacing: -1.0px;
+        line-height: 1;
       }
     </style>
   </head>
