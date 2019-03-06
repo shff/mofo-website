@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Motherfucking Website</title>
     <style>
-      body.light {
-        --bg: #fff;
-        --fg: rgba(0,0,0,.9);
-      }
-      body.dark {
-        --bg: #222;
-        --fg: rgba(255,255,255,.9);
-      }
       * {
         box-sizing: inherit;
       }
@@ -20,14 +12,12 @@
         box-sizing: border-box;
       }
       ::selection {
-        color: var(--bg);
-        background: var(--fg);
+        color: #fff;
+        background: rgba(0,0,0,.9);
       }
       body {
         color: #000;
-        color: var(--fg);
         background-color: #fff;
-        background-color: var(--bg);
         transition: background 0.2s ease;
         max-width: 700px;
         margin: 40px auto;
@@ -62,7 +52,7 @@
         font-size: 1.5em;
       }
       blockquote {
-        border-left: 10px solid var(--fg);
+        border-left: 10px solid #000;
         padding-left: 32px;
       }
     </style>
