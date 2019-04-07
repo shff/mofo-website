@@ -27,14 +27,9 @@
         -moz-hyphens: auto;
         -ms-hyphens: auto;
         hyphens: auto;
-      }
-      .container {
-        max-width: 700px;
-        margin: 40px auto;
-        padding: 0 16px;
-      }
-      nav {
-        border-top: solid 6px #000;
+        text-rendering: geometricPrecision;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
       a {
         color: inherit;
@@ -68,15 +63,61 @@
           font-size: 3.5em;
         }
       }
+
+      .black {
+        padding: 32px 0;
+        background-color: #000;
+        color: #eee;
+      }
+      .sans p {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 18px;
+      }
+      .container {
+        margin: 40px auto;
+        max-width: 700px;
+        padding: 0 16px;
+      }
+      .container-medium {
+        margin: 0 auto;
+        max-width: 960px;
+        padding: 2.4rem 2rem;
+      }
+      .container-large {
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 7.2rem 2rem;
+      }
+      .grid {
+        display: flex;
+      }
+      .grid > * {
+        flex: 1;
+        flex-grow: 4;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .grid > *.column--light {
+        flex-grow: 2;
+      }
+      .grid > *.column--heavy {
+        flex-grow: 8;
+      }
+      @media (max-width: 599px) {
+        .grid {
+          display: block;
+        }
+      }
     </style>
   </head>
   <body>
-    <nav></nav>
-    <article class="container">
-      <header>
+    <div class="black">
+      <header class="container">
         <h1>This is a motherfucking website.</h1>
         <aside>And it's fucking perfect.</aside>
       </header>
+    </div>
+    <article class="container">
       <h2>Seriously, what the fuck else do you want?</h2>
       <p>You probably build websites and think your shit is special. You think your 13 megabyte parallax-ative home page is going to get you some fucking Awwward banner you can glue to the top corner of your site. You think your 40-pound jQuery file and 83 polyfills give IE7 a boner because it finally has box-shadow. Wrong, motherfucker. Let me describe your perfect-ass website:</p>
       <ul>
@@ -107,5 +148,52 @@
       <p>From the philosophies expressed (poorly) above,
         <a href="http://txti.es">txti </a>was created. You should try it today to make your own motherfucking websites.</p>
     </article>
+
+    <div class="black sans">
+      <section class="container">
+        <article class="grid grid--medium">
+          <div>
+            <h4>Native Typography</h4>
+            <p>
+              We're using either fonts or safe web fonts for all the text rendering. No extra downloads.
+            </p>
+          </div>
+          <div>
+            <h4>Grid System</h4>
+            <p>
+              We're using a simple grid system made with flexbox. It adjusts itself to the size of each column.
+            </p>
+          </div>
+        </article>
+        <article class="grid grid--medium">
+          <div>
+            <h4>Modern Looks</h4>
+            <p>
+              The website has a timeless look thanks to the timeless typography and contrasts.
+            </p>
+          </div>
+          <div>
+            <h4>No preprocessing</h4>
+            <p>
+              No SASS, SCSS, Less or anything like that. Simple and pure CSS.
+            </p>
+          </div>
+        </article>
+        <article class="grid grid--medium">
+          <div>
+            <h4>High Performance</h4>
+            <p>
+              This whole website has less than 3k gzipped. Don't worry about speed anymore.
+            </p>
+          </div>
+          <div>
+            <h4>Accessible</h4>
+            <p>
+              Works in your motherfucking Tamagotchi.
+            </p>
+          </div>
+        </article>
+      </section>
+    </div>
   </body>
 </html>
